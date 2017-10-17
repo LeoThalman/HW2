@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	var itemArr = new Array();
+	var itemArr = [];
 	$('button').on('click',function() {
 	$('#errCode').remove();	
-	var name = $('#iName').val();
+	var name = $('#iName').val().trim();
 	var amount = parseInt($('#iAmount').val());
 	var price = parseFloat($('#iPrice').val());
 	var errCode="";
@@ -29,12 +29,15 @@ $(document).ready(function(){
 	}
 	else{
 		var total = amount * price;
-		var itemArr.push({iName : name, iAmount : amount, iPrice: price, iTotal : total});
+		var item = {iName : name, iAmount : amount, iPrice: price, iTotal : total};
 		itemArr.push(item);
-		var iRow = $('	<tr><td>'+item.name+'</td><td>'+item.+'</td><td>'++'</td><td>'++'</td></tr>');
-		
-		
-		);
+		var iRow = $('<tr><td>'+item.iName+'</td><td>'+item.iAmount+'</td><td>$'+item.iPrice+'</td><td>$'+item.iTotal+'</td></tr>');
+		var cTotal = 0;
+		for(var i = 0; i < itemArr.length; i+=1) {
+			cTotal += itemArr[i].iTotal;
+		}
+		iRow.insertBefore('#lRow');
+		$('#total').text('$' + cTotal);		
 	}
 	});
 });
