@@ -15,16 +15,31 @@
 	 <div class="col-sm-auto">
 	   <h4>Add Item</h4>
 		 <form>
-		   Item name:<br><input type="text" name="iName" value=""><br>		
-		   Item amount:<br><input type="text" name="iAmount" value=""><br>	
-		   Item price:<br><input type="text" name="iPrice" value=""><br>
-		   <input type="submit" value="Submit">
+		   Item name:<br><input type="text" class="iName" value=""><br>		
+		   Item amount:<br><input type="number" class="iAmount" value=""><br>	
+		   Item price:<br><input type="number" class="iPrice" value=""><br>
+		   <button type="button">Add to List</button>
 		 </form>
 	   </div>
 	   <div class="col-sm-auto">
 	   <h4>Item Total</h4>
-		 
+		 	<table class="items">		
+			<tr>
+				<th>Item Name</th>
+				<th>Item Amount</th>
+				<th>Item Price</th>
+				<th>Total Item Price</th>
+			</tr>
+			<tr>
+				<tr></tr>
+				<tr></tr>
+				<tr>Total Item Cost</tr>
+				<tr></tr>
+			</tr>			
+		</table>
 	   </div>
 	 </div>
+	 <script src="js/jquery-3.2.1.js></script>
+	 <script src="js/application.js"></script>
 	</body>
 </html>
