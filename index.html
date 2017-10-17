@@ -14,32 +14,32 @@
 	 <div class="row">
 	 <div class="col-sm-auto">
 	   <h4>Add Item</h4>
-		 <form>
-		   Item name:<br><input type="text" class="iName" value=""><br>		
-		   Item amount:<br><input type="number" class="iAmount" value=""><br>	
-		   Item price:<br><input type="number" class="iPrice" value=""><br>
+		 <form class="item-in">
+		   Item name:<br><input type="text" id="iName" value=""><br>		
+		   Item amount:<br><input type="number" id="iAmount" value=""><br>	
+		   Item price:<br><input type="number" id="iPrice" value=""><br>
 		   <button type="button">Add to List</button>
 		 </form>
 	   </div>
 	   <div class="col-sm-auto">
 	   <h4>Item Total</h4>
-		 	<table class="items">		
+		 	<table class="item-out">		
 			<tr>
 				<th>Item Name</th>
 				<th>Item Amount</th>
 				<th>Item Price</th>
 				<th>Total Item Price</th>
 			</tr>
-			<tr>
-				<tr></tr>
-				<tr></tr>
-				<tr>Total Item Cost</tr>
-				<tr></tr>
+			<tr id="lRow">
+				<td></td>
+				<td></td>
+				<td>Total Item Cost</td>
+				<td id="total"></td>
 			</tr>			
 		</table>
 	   </div>
 	 </div>
-	 <script src="js/jquery-3.2.1.js></script>
+	 <script src="js/jquery-3.2.1.js"></script>
 	 <script src="js/application.js"></script>
 	</body>
 </html>
