@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var itemArr = new Array();
 	$('button').on('click',function() {
 	$('#errCode').remove();	
 	var name = $('#iName').val();
@@ -27,9 +28,13 @@ $(document).ready(function(){
 	  errCode.insertAfter(this);
 	}
 	else{
-		var iTotal = amount * price;
-		var tRow = $('<tr><td>'+name+'</td><td>'+amount+'</td><td>'+price+'</td><td id="iTotal">'+iTotal+'</td></tr>');
-		tRow.insertBefore($('#lRow'));
+		var total = amount * price;
+		var itemArr.push({iName : name, iAmount : amount, iPrice: price, iTotal : total});
+		itemArr.push(item);
+		var iRow = $('	<tr><td>'+item.name+'</td><td>'+item.+'</td><td>'++'</td><td>'++'</td></tr>');
+		
+		
+		);
 	}
 	});
 });
