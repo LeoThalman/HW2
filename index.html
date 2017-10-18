@@ -10,9 +10,9 @@
 		<title>Cost Tracker</title>
 	</head>
 	<body>
-	 <h3 style="text-align:center;">Cost Tracker</h3>
-	 <div class="row">
-	 <div class="col-sm-auto">
+	 <div class="container-fluid"><h3 class="title">Cost Tracker</h3></div>
+	 <div class="row container">
+	 <div class="col-sm-4">
 	   <h4>Add Item</h4>
 		 <form class="item-in">
 		   Item name:<br><input type="text" id="iName" value=""><br>		
@@ -21,8 +21,7 @@
 		   <button type="button">Add to List</button>
 		 </form>
 	   </div>
-	   <div class="col-sm-auto">
-	   <h4>Item Total</h4>
+	   <div class="col-sm-8">
 		 	<table class="item-out">		
 			<tr>
 				<th>Item Name</th>
@@ -30,11 +29,11 @@
 				<th>Item Price</th>
 				<th>Total Item Price</th>
 			</tr>
-			<tr id="lRow">
+			<tr class="lRow">
 				<td></td>
 				<td></td>
 				<td>Total Item Cost</td>
-				<td id="total"></td>
+				<td id="total">$0.00</td>
 			</tr>			
 		</table>
 	   </div>
